@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://wbpreview.com/previews/WB0164888/charts.html -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+
+	<title>Charts | Dashboard Admin</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,800">
+	<link rel="stylesheet" href="http://wbpreview.com/previews/WB0164888/css/font-awesome.css">
+	
+	<link rel="stylesheet" href="http://wbpreview.com/previews/WB0164888/css/bootstrap.css">
+	<link rel="stylesheet" href="http://wbpreview.com/previews/WB0164888/css/bootstrap-responsive.css">
+
+	<link rel="stylesheet" href="http://wbpreview.com/previews/WB0164888/css/ui-lightness/jquery-ui-1.8.21.custom.css">
+	<link rel="stylesheet" href="http://wbpreview.com/previews/WB0164888/js/plugins/cirque/cirque.css">	
+	
+	<link rel="stylesheet" href="http://wbpreview.com/previews/WB0164888/css/application.css">
+
+	<script src="./charts_files/modernizr-2.5.3.min.js"></script>
+	
+	<style>
+	
+	.cirque-stats {
+		text-align: center;
+	}
+	
+	.cirque-stats .cirque-container {	
+		margin-bottom: 3em;	
+		margin-right: 2em;
+		margin-left: 2em;
+	}
+	
+	</style>
+
+</head>
+
+<body>
+	
+<div id="wrapper">
+	
+<div id="topbar">
+	
+	<div class="container">
+		
+		<a href="javascript:;" id="menu-trigger" class="dropdown-toggle" data-toggle="dropdown" data-target="#">
+			<i class="icon-cog"></i>
+		</a>
+	
+		<div id="top-nav">
+			
+			<ul>
+				<li class="dropdown">
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						View Your Site				
+						<b class="caret"></b>
+					</a>
+					
+					<ul class="dropdown-menu pull-right">
+						<li><a href="javascript:;">View Site #1</a></li>
+						<li><a href="javascript:;">View Site #2</a></li>
+						<li class="dropdown-submenu">
+		                  <a tabindex="-1" href="http://wbpreview.com/previews/WB0164888/charts.html#">Dropdown menu</a>
+		                  <ul class="dropdown-menu">
+		                    <li><a tabindex="-1" href="http://wbpreview.com/previews/WB0164888/charts.html#">Second level link</a></li>
+		                    <li><a tabindex="-1" href="http://wbpreview.com/previews/WB0164888/charts.html#">Second level link</a></li>
+		                    <li><a tabindex="-1" href="http://wbpreview.com/previews/WB0164888/charts.html#">Second level link</a></li>
+		                  </ul>
+		                </li>
+					</ul> 
+				</li>
+			</ul>
+			
+			<ul class="pull-right">
+				<li><a href="javascript:;"><i class="icon-user"></i> Logged in as John Doe</a></li>
+				<li><a href="javascript:;"><span class="badge badge-primary">1</span> New Message</a></li>
+				<li class="dropdown">
+					<a href="http://wbpreview.com/previews/WB0164888/pages/settings.html" class="dropdown-toggle" data-toggle="dropdown">
+						Settings						
+						<b class="caret"></b>
+					</a>
+					
+					<ul class="dropdown-menu pull-right">
+						<li><a href="javascript:;">Settings #1</a></li>
+						<li><a href="javascript:;">Settings #2</a></li>
+						<li class="dropdown-submenu">
+		                  <a tabindex="-1" href="http://wbpreview.com/previews/WB0164888/charts.html#">Dropdown menu</a>
+		                  <ul class="dropdown-menu">
+		                    <li><a tabindex="-1" href="http://wbpreview.com/previews/WB0164888/charts.html#">Second level link</a></li>
+		                    <li><a tabindex="-1" href="http://wbpreview.com/previews/WB0164888/charts.html#">Second level link</a></li>
+		                    <li><a tabindex="-1" href="http://wbpreview.com/previews/WB0164888/charts.html#">Second level link</a></li>
+		                  </ul>
+		                </li>
+					</ul> 
+				</li>
+				<li><a href="http://wbpreview.com/previews/WB0164888/login.html">Logout</a></li>
+			</ul>
+			
+		</div> <!-- /#top-nav -->
+		
+	</div> <!-- /.container -->
+	
+</div> <!-- /#topbar -->
+
+
+	
+	
+<div id="header">
+	
+	<div class="container">
+		
+		<a href="http://wbpreview.com/previews/WB0164888/index.html" class="brand">Dashboard Admin</a>
+		
+		<a href="javascript:;" class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        	<i class="icon-reorder"></i>
+      	</a>
+	
+		<div class="nav-collapse">
+			<ul id="main-nav" class="nav pull-right">
+				<li class="nav-icon">
+					<a href="http://wbpreview.com/previews/WB0164888/index.html">
+						<i class="icon-home"></i>
+						<span>Home</span>        					
+					</a>
+				</li>
+				
+				<li class="dropdown active">					
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-th"></i>
+						<span>Components</span> 
+						<b class="caret"></b>
+					</a>	
+				
+					<ul class="dropdown-menu">
+						<li><a href="http://wbpreview.com/previews/WB0164888/elements.html">Elements</a></li>
+						<li><a href="http://wbpreview.com/previews/WB0164888/validation.html">Validation</a></li>
+						<li><a href="http://wbpreview.com/previews/WB0164888/jqueryui.html">jQuery UI</a></li>
+						<li><a href="./charts_files/charts.html">Charts</a></li>
+						<li><a href="http://wbpreview.com/previews/WB0164888/bonus.html">Bonus Elements</a></li>
+						<li class="dropdown-submenu">
+		                  <a tabindex="-1" href="http://wbpreview.com/previews/WB0164888/charts.html#">Dropdown menu</a>
+		                  <ul class="dropdown-menu">
+		                    <li><a tabindex="-1" href="http://wbpreview.com/previews/WB0164888/charts.html#">Second level link</a></li>
+		                    <li><a tabindex="-1" href="http://wbpreview.com/previews/WB0164888/charts.html#">Second level link</a></li>
+		                    <li><a tabindex="-1" href="http://wbpreview.com/previews/WB0164888/charts.html#">Second level link</a></li>
+		                  </ul>
+		                </li>
+					</ul>    				
+				</li>
+				
+				<li class="dropdown">					
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-copy"></i>
+						<span>Sample Pages</span> 
+						<b class="caret"></b>
+					</a>	
+				
+					<ul class="dropdown-menu">
+						<li><a href="http://wbpreview.com/previews/WB0164888/faq.html">FAQ</a></li>
+						<li><a href="http://wbpreview.com/previews/WB0164888/gallery.html">Image Gallery</a></li>
+						<li><a href="http://wbpreview.com/previews/WB0164888/pricing.html">Pricing Plans</a></li>
+						<li><a href="http://wbpreview.com/previews/WB0164888/reports.html">Reports</a></li>
+						<li><a href="http://wbpreview.com/previews/WB0164888/settings.html">Settings</a></li>
+					</ul>    				
+				</li>
+				
+				<li class="dropdown">					
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-external-link"></i>
+						<span>Extras</span> 
+						<b class="caret"></b>
+					</a>	
+				
+					<ul class="dropdown-menu">							
+						<li><a href="http://wbpreview.com/previews/WB0164888/login.html">Login</a></li>
+						<li><a href="http://wbpreview.com/previews/WB0164888/signup.html">Signup</a></li>
+						<li><a href="http://wbpreview.com/previews/WB0164888/error.html">Error</a></li>
+						<li><a href="http://wbpreview.com/previews/WB0164888/skins.html">Skins</a></li>
+						<li><a href="http://wbpreview.com/previews/WB0164888/sticky.html">Sticky Footer</a></li>
+					</ul>    				
+				</li>
+			</ul>
+			
+		</div> <!-- /.nav-collapse -->
+
+	</div> <!-- /.container -->
+	
+</div> <!-- /#header -->
+
+
+
+
+<div id="masthead">
+	
+	<div class="container">
+		
+		<div class="masthead-pad">
+			
+			<div class="masthead-text">
+				<h2>Charts</h2>
+				<p>You are currently working on 4 projects, with 23 total tasks.</p>
+			</div> <!-- /.masthead-text -->
+			
+		</div>
+		
+	</div> <!-- /.container -->	
+	
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+	<div class="container">
+				
+		<div class="row">
+			
+			<div class="span6">
+				
+				<h3>Vertical Chart</h3>
+				
+				<hr>
+				
+				<div id="vertical-chart" class="chart-holder" style="padding: 0px; position: relative; "><canvas class="base" width="570" height="325"></canvas><canvas class="overlay" width="570" height="325" style="position: absolute; left: 0px; top: 0px; "></canvas><div class="tickLabels" style="font-size:smaller"><div class="xAxis x1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:center;left:33px;top:305px;width:51px">1.0</div><div class="tickLabel" style="position:absolute;text-align:center;left:94px;top:305px;width:51px">1.5</div><div class="tickLabel" style="position:absolute;text-align:center;left:155px;top:305px;width:51px">2.0</div><div class="tickLabel" style="position:absolute;text-align:center;left:215px;top:305px;width:51px">2.5</div><div class="tickLabel" style="position:absolute;text-align:center;left:276px;top:305px;width:51px">3.0</div><div class="tickLabel" style="position:absolute;text-align:center;left:337px;top:305px;width:51px">3.5</div><div class="tickLabel" style="position:absolute;text-align:center;left:397px;top:305px;width:51px">4.0</div><div class="tickLabel" style="position:absolute;text-align:center;left:458px;top:305px;width:51px">4.5</div><div class="tickLabel" style="position:absolute;text-align:center;left:519px;top:305px;width:51px">5.0</div></div><div class="yAxis y1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:right;top:288px;right:558px;width:12px">0</div><div class="tickLabel" style="position:absolute;text-align:right;top:239px;right:558px;width:12px">10</div><div class="tickLabel" style="position:absolute;text-align:right;top:190px;right:558px;width:12px">20</div><div class="tickLabel" style="position:absolute;text-align:right;top:141px;right:558px;width:12px">30</div><div class="tickLabel" style="position:absolute;text-align:right;top:92px;right:558px;width:12px">40</div><div class="tickLabel" style="position:absolute;text-align:right;top:43px;right:558px;width:12px">50</div><div class="tickLabel" style="position:absolute;text-align:right;top:-6px;right:558px;width:12px">60</div></div></div><div class="legend"><div style="position: absolute; width: 131px; height: 66px; top: 9px; right: 9px; background-color: rgb(255, 255, 255); opacity: 0.85; "> </div><table style="position:absolute;top:9px;right:9px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(148,186,101);overflow:hidden"></div></div></td><td class="legendLabel">Finance</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(43,78,114);overflow:hidden"></div></div></td><td class="legendLabel">Advertising &amp; Marketing</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(39,144,176);overflow:hidden"></div></div></td><td class="legendLabel">Manufacturing</td></tr></tbody></table></div></div> <!-- /#vertical-chart -->
+				
+			</div> <!-- /.span6 -->
+			
+			<div class="span6">
+				
+				<h3>Cirque Stats</h3>
+				
+				<hr>
+				
+				<div class="cirque-stats">
+					<div class="ui-cirque cirque-container" data-value="2875" data-total="3245" data-arc-color="#4074AA" data-label="ratio" style="width: 120px; height: 120px; "><canvas width="120" height="120" class="cirque-fill"></canvas><canvas width="120" height="120" class="cirque-track"></canvas><div class="cirque-label ratio" style="width: 120px; height: 120px; line-height: 120px; ">2875/3245</div></div>
+			        <div class="ui-cirque cirque-container" data-value="13" data-arc-color="#BBBBBB" style="width: 120px; height: 120px; "><canvas width="120" height="120" class="cirque-fill"></canvas><canvas width="120" height="120" class="cirque-track"></canvas><div class="cirque-label percent" style="width: 120px; height: 120px; line-height: 120px; ">13%</div></div>
+			        <div class="ui-cirque cirque-container" data-value="63" data-total="225" data-arc-color="#2790B0" data-label="ratio" style="width: 120px; height: 120px; "><canvas width="120" height="120" class="cirque-fill"></canvas><canvas width="120" height="120" class="cirque-track"></canvas><div class="cirque-label ratio" style="width: 120px; height: 120px; line-height: 120px; ">63/225</div></div>
+			        <div class="ui-cirque cirque-container" data-value="40" data-arc-color="#999999" style="width: 120px; height: 120px; "><canvas width="120" height="120" class="cirque-fill"></canvas><canvas width="120" height="120" class="cirque-track"></canvas><div class="cirque-label percent" style="width: 120px; height: 120px; line-height: 120px; ">40%</div></div>
+					<div class="ui-cirque cirque-container" data-value="72" data-arc-color="#222222" data-label="ratio" style="width: 120px; height: 120px; "><canvas width="120" height="120" class="cirque-fill"></canvas><canvas width="120" height="120" class="cirque-track"></canvas><div class="cirque-label ratio" style="width: 120px; height: 120px; line-height: 120px; ">72/100</div></div>
+			        <div class="ui-cirque cirque-container" data-value="57" data-arc-color="#94BA65" style="width: 120px; height: 120px; "><canvas width="120" height="120" class="cirque-fill"></canvas><canvas width="120" height="120" class="cirque-track"></canvas><div class="cirque-label percent" style="width: 120px; height: 120px; line-height: 120px; ">57%</div></div>
+			    </div> <!-- /.cirque-stats -->
+				
+			</div> <!-- /.span6 -->
+									
+		</div> <!-- /row -->
+				
+		<div class="row">
+			
+			<div class="span6">
+				
+				<h3>Line Chart</h3>
+				
+				<hr>
+				
+				<div id="line-chart" class="chart-holder" style="padding: 0px; position: relative; "><canvas class="base" width="570" height="325"></canvas><canvas class="overlay" width="570" height="325" style="position: absolute; left: 0px; top: 0px; "></canvas><div class="tickLabels" style="font-size:smaller"><div class="xAxis x1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:center;left:58px;top:305px;width:81px">0:00</div><div class="tickLabel" style="position:absolute;text-align:center;left:151px;top:305px;width:81px">4:00</div><div class="tickLabel" style="position:absolute;text-align:center;left:244px;top:305px;width:81px">8:00</div><div class="tickLabel" style="position:absolute;text-align:center;left:338px;top:305px;width:81px">12:00</div><div class="tickLabel" style="position:absolute;text-align:center;left:431px;top:305px;width:81px">16:00</div><div class="tickLabel" style="position:absolute;text-align:center;left:525px;top:305px;width:81px">20:00</div></div><div class="yAxis y1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:right;top:288px;right:549px;width:21px">0.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:239px;right:549px;width:21px">2.5</div><div class="tickLabel" style="position:absolute;text-align:right;top:190px;right:549px;width:21px">5.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:142px;right:549px;width:21px">7.5</div><div class="tickLabel" style="position:absolute;text-align:right;top:93px;right:549px;width:21px">10.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:44px;right:549px;width:21px">12.5</div><div class="tickLabel" style="position:absolute;text-align:right;top:-5px;right:549px;width:21px">15.0</div></div></div><div class="legend"><div style="position: absolute; width: 68px; height: 44px; top: 10px; right: 10px; background-color: rgb(255, 255, 255); opacity: 0.85; "> </div><table style="position:absolute;top:10px;right:10px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(148,186,101);overflow:hidden"></div></div></td><td class="legendLabel">Revenue</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(43,78,114);overflow:hidden"></div></div></td><td class="legendLabel">Expenses</td></tr></tbody></table></div></div> <!-- /#line-chart -->
+				
+			</div> <!-- /.span6 -->
+			
+			<div class="span6">
+				
+				<h3>Donut Chart</h3>
+				
+				<hr>
+				
+				<div id="donut-chart" class="chart-holder" style="padding: 0px; position: relative; "><canvas class="base" width="570" height="325"></canvas><canvas class="overlay" width="570" height="325" style="position: absolute; left: 0px; top: 0px; "></canvas><div class="legend"><div style="position: absolute; width: 100px; height: 66px; top: 5px; right: 5px; background-color: rgb(255, 255, 255); opacity: 0.85; "> </div><table style="position:absolute;top:5px;right:5px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(148,186,101);overflow:hidden"></div></div></td><td class="legendLabel">Manufacturing</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(43,78,114);overflow:hidden"></div></div></td><td class="legendLabel">Finance</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(39,144,176);overflow:hidden"></div></div></td><td class="legendLabel">Energy &amp; Utilities</td></tr></tbody></table></div></div> <!-- /#donut-chart -->
+				
+			</div> <!-- /.span6 -->
+									
+		</div> <!-- /row -->
+				
+		<div class="row">
+			
+			<div class="span6">
+				
+				<h3>Pie Chart</h3>
+				
+				<hr>
+				
+				<div id="pie-chart" class="chart-holder" style="padding: 0px; position: relative; "><canvas class="base" width="570" height="325"></canvas><canvas class="overlay" width="570" height="325" style="position: absolute; left: 0px; top: 0px; "></canvas><div class="legend"><div style="position: absolute; width: 131px; height: 110px; top: 5px; right: 5px; background-color: rgb(255, 255, 255); opacity: 0.85; "> </div><table style="position:absolute;top:5px;right:5px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(148,186,101);overflow:hidden"></div></div></td><td class="legendLabel">Manufacturing</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(43,78,114);overflow:hidden"></div></div></td><td class="legendLabel">Finance</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(39,144,176);overflow:hidden"></div></div></td><td class="legendLabel">Energy &amp; Utilities</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(119,119,119);overflow:hidden"></div></div></td><td class="legendLabel">Advertising &amp; Marketing</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(85,85,85);overflow:hidden"></div></div></td><td class="legendLabel">Professional Services</td></tr></tbody></table></div></div> <!-- /#pie-chart -->
+				
+			</div> <!-- /.span6 -->
+			
+			<div class="span6">
+				
+				<h3>Horizontal Chart</h3>
+				
+				<hr>
+				
+				<div id="horizontal-chart" class="chart-holder" style="padding: 0px; position: relative; "><canvas class="base" width="570" height="325"></canvas><canvas class="overlay" width="570" height="325" style="position: absolute; left: 0px; top: 0px; "></canvas><div class="tickLabels" style="font-size:smaller"><div class="xAxis x1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:center;left:-18px;top:305px;width:81px">0</div><div class="tickLabel" style="position:absolute;text-align:center;left:79px;top:305px;width:81px">10</div><div class="tickLabel" style="position:absolute;text-align:center;left:176px;top:305px;width:81px">20</div><div class="tickLabel" style="position:absolute;text-align:center;left:273px;top:305px;width:81px">30</div><div class="tickLabel" style="position:absolute;text-align:center;left:370px;top:305px;width:81px">40</div><div class="tickLabel" style="position:absolute;text-align:center;left:467px;top:305px;width:81px">50</div></div><div class="yAxis y1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:right;top:288px;right:555px;width:15px">0.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:239px;right:555px;width:15px">1.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:190px;right:555px;width:15px">2.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:141px;right:555px;width:15px">3.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:92px;right:555px;width:15px">4.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:43px;right:555px;width:15px">5.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:-6px;right:555px;width:15px">6.0</div></div></div><div class="legend"><div style="position: absolute; width: 121px; height: 66px; top: 9px; right: 9px; background-color: rgb(255, 255, 255); opacity: 0.85; "> </div><table style="position:absolute;top:9px;right:9px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(148,186,101);overflow:hidden"></div></div></td><td class="legendLabel">Manufacturing</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(43,78,114);overflow:hidden"></div></div></td><td class="legendLabel">Energy &amp; Utilities</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(39,144,176);overflow:hidden"></div></div></td><td class="legendLabel">Professional Services</td></tr></tbody></table></div></div> <!-- /#horizontal-chart -->
+				
+			</div> <!-- /.span6 -->
+									
+		</div> <!-- /row -->
+		
+		
+
+	</div> <!-- /container -->
+
+</div> <!-- /#content -->
+
+<div class="push"></div></div> <!-- /#wrapper -->
+
+
+
+
+<div id="footer">
+		
+	<div class="container">
+		
+		<div class="row">
+			
+			<div class="span6">
+				© 2012 <a href="http://jumpstartui.com/">Jumpstart UI</a>, all rights reserved.
+			</div> <!-- /span6 -->
+			
+			<div id="builtby" class="span6">
+				<a href="http://jumpstartui.com/">Built by Jumpstart.</a>				
+			</div> <!-- /.span6 -->
+			
+		</div> <!-- /row -->
+		
+	</div> <!-- /container -->
+	
+</div> <!-- /#footer -->
+
+
+
+<script src="./charts_files/jquery-1.7.2.min.js"></script>
+<script src="./charts_files/jquery-ui-1.8.21.custom.min.js"></script>
+<script src="./charts_files/jquery.ui.touch-punch.min.js"></script>
+
+<script src="./charts_files/bootstrap.min.js"></script>
+
+<script src="./charts_files/Theme.js"></script>
+<script src="./charts_files/Charts.js"></script>
+
+<script src="./charts_files/excanvas.min.js"></script>
+
+<script src="./charts_files/cirque.js"></script>
+
+<script src="./charts_files/jquery.flot.js"></script>
+<script src="./charts_files/jquery.flot.pie.js"></script>
+<script src="./charts_files/jquery.flot.orderBars.js"></script>
+<script src="./charts_files/jquery.flot.tooltip.min.js"></script>
+<script src="./charts_files/jquery.flot.resize.js"></script>
+
+<script src="./charts_files/vertical.js"></script>
+<script src="./charts_files/pie.js"></script>
+<script src="./charts_files/donut.js"></script>
+<script src="./charts_files/line.js"></script>
+<script src="./charts_files/horizontal.js"></script>
+
+<script>
+
+$(function () {
+	
+	Theme.init ();
+	
+});
+
+</script>
+
+
+<div id="flotTip" style="display: none; position: absolute; background-color: rgb(255, 255, 255); z-index: 100; padding: 0.4em 0.6em; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em; border-bottom-left-radius: 0.5em; font-size: 0.8em; border: 1px solid rgb(17, 17, 17); background-position: initial initial; background-repeat: initial initial; "></div></body></html>

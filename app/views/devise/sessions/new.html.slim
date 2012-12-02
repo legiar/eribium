@@ -1,0 +1,37 @@
+.account-container.login.stacked
+  .content.clearfix
+    = form_for session_path(resource_name), method: :post do
+      h1 Sign In
+
+      .login-fields
+        p Sign in using your registered account:
+        .field
+          label for="username" Username:
+          input type="text" id="username" name="account[email]" value="" placeholder="Username" class="login username-field"
+        .field
+          label for="password" Password:
+          input type="password" id="password" name="account[password]" value="" placeholder="Password" class="login password-field"
+
+      .login-actions
+        span.login-checkbox
+          input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4"
+          label class="choice" for="Field" Keep me signed in
+                  
+        button class="button btn btn-primary btn-large" Sign In
+      
+      /.login-social
+        p Sign in using social network:
+        
+        .twitter
+          a href="#" class="btn_1" Login with Twitter
+        .fb
+          a href="#" class="btn_2" Login with Facebook
+
+.login-extra
+  /' Don't have an account?
+  /a href="./signup.html" Sign Up
+  /br
+  /' Remind
+  /a href="#" Password
+  /br
+  = render "devise/shared/links"
