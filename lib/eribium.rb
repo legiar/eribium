@@ -1,17 +1,18 @@
 require 'inherited_resources'
-#require 'meta_search'
-#require 'kaminari'
+require 'meta_search'
+require 'kaminari'
 
-#require 'state_machine'
+require 'state_machine'
 #require 'paperclip'
 
 require 'devise'
-# TODO: Detect if cancan used
-#require 'cancan'
-# TODO: Detect if rolify used
-#require 'rolify'
+require 'rolify'
+require 'cancan'
+
+require 'slim'
 
 require 'simple_form'
+require 'nested_form'
 
 require 'bootstrap-sass'
 require 'modernizr'
