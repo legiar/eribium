@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
 
   s.authors       = ["Mikhail Mikhaliov"]
   s.email         = ["legiar@gmail.com"]
-  s.description   = %q{TODO: Write a gem description}
-  s.summary       = %q{TODO: Write a gem summary}
-  s.homepage      = ""
+  s.description   = %q{Gem for create CRM-like system}
+  s.summary       = %q{Gem for create CRM-like system}
+  s.homepage      = "https://github.com/legiar/eribium"
 
   s.files         = `git ls-files`.split($\)
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
@@ -35,7 +35,7 @@ Gem::Specification.new do |s|
   
   s.add_dependency 'sass-rails',            '>= 3.2.3'
   s.add_dependency 'modernizr',             '2.6.2'
-  s.add_dependency 'bootstrap-sass',        '2.2.1.1'
+  s.add_dependency 'bootstrap-sass',        '2.2.2.0'
   s.add_dependency 'jquery-rails'
 
   s.add_dependency 'arbre',                 '>= 1.0.1'
