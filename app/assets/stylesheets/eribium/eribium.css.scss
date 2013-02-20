@@ -1,3 +1,51 @@
-@import "eribium/mixins";
-@import "eribium/font-awesome";
-@import "eribium/all";
+@import "bootstrap/variables";
+
+//$baseFontFamily:                      "Segoe UI", "Tahoma";
+//$altFontFamily:                       "Segoe UI", "Tahoma";
+$baseFontFamily:                      "Helvetica Neue", Helvetica, Arial, sans-serif;
+$altFontFamily:                       "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$linkColor:                           #78808a;
+
+$navbarText:                          #fff;
+$navbarLinkColor:                     #fff;
+$navbarLinkColorHover:                #fff;
+$navbarLinkColorActive:               #00B6F3;
+$navbarLinkBackgroundHover:           transparent;
+$navbarLinkBackgroundActive:          rgba(0, 0, 0, 0.4);
+
+$navbarBrandColor:                    #fff;
+
+@import "bootstrap";
+@import "bootstrap/mixins";
+@import "bootstrap-responsive";
+
+@import "bootstrap-datepicker";
+@import "bootstrap-modal";
+
+@import "font-awesome";
+
+@import "scaffold";
+@import "layouts";
+
+@import "typography";
+@import "form";
+@import "tables";
+
+
+@import "breadcrumbs";
+@import "modals";
+@import "fixes";
+
+@import "buttons";
+@import "checkboxes";
+//@import "badges";
+
+@import "navs";
+@import "navbars";
+
+@import "search";
+@import "daterangepicker";
+
+@import "login";
+@import "profile";

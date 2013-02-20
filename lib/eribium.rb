@@ -10,31 +10,46 @@ require 'rolify'
 require 'cancan'
 
 require 'slim'
+require 'arbre'
 
 require 'simple_form'
 require 'nested_form'
 
-require 'bootstrap-sass'
 require 'modernizr'
-
 require 'jquery-rails'
+require 'jquery-rails-cdn'
+require 'select2-rails'
+require 'bootstrap-sass'
 
 require 'eribium/engine'
 
 module Eribium
-  autoload :VERSION,                  'eribium/version'
+  extend ActiveSupport::Autoload
+  autoload :VERSION
+  autoload :Environment
+  autoload :Settings
 
-  autoload :Application,              'eribium/application'
+  autoload :BackendController
 
-  autoload :Namespace,                'eribium/models/namespace'
-  autoload :Page,                     'eribium/models/page'
-  autoload :Resource,                 'eribium/models/resource'
-  autoload :Workspace,                'eribium/models/workspace'
+  #autoload :Application,              'eribium/application'
+  #autoload :Router,                   'eribium/router'
 
-  autoload :BaseController,           'eribium/controllers/base_controller'
-  autoload :PageController,           'eribium/controllers/page_controller'
-  autoload :ResourceController,       'eribium/controllers/resource_controller'
-  autoload :WorkspaceController,      'eribium/controllers/workspace_controller'
+  #autoload :Namespace,                'eribium/models/namespace'
+  #autoload :Workspace,                'eribium/models/workspace'
+  #autoload :Model,                    'eribium/models/model'
+
+  #autoload :BaseController,           'eribium/controllers/base_controller'
+  #autoload :PageController,           'eribium/controllers/page_controller'
+  #autoload :WorkspaceController,      'eribium/controllers/workspace_controller'
+
+  #autoload :NamespacesController,     'eribium/controllers/namespaces_controller'
+  #autoload :WorkspacesController,     'eribium/controllers/workspaces_controller'
+  #autoload :ModelsController,         'eribium/controllers/models_controller'
+  
+  #autoload :Helpers,                  'eribium/helpers'
+  #autoload :Views,                    'eribium/views'
+
+  autoload :ViewHelpers
 
   class << self
     attr_accessor :application
@@ -44,27 +59,32 @@ module Eribium
     end
 
     def config
-      application.prepare!
-      yield(application)
-      application.init!
+      yield Eribium::Config if block_given?
+      Eribium::Config
     end
 
-    delegate :resource, to: :application
-    delegate :workspace, to: :application
-    delegate :routes,    to: :application
+    #delegate :resource, to: :application
+    #delegate :workspace, to: :application
+    delegate :routes, to: :application
 
     def before_load(&block)
-      ActiveSupport::Notifications.subscribe("eribium.application.before_load") do |event, app, *args|
+      ActiveSupport::Notifications.subscribe("eribium.application.load.before") do |event, app, *args|
         block.call(app)
       end
     end
 
     def after_load(&block)
-      ActiveSupport::Notifications.subscribe("eribium.application.after_load") do |event, app, *args|
+      ActiveSupport::Notifications.subscribe("eribium.application.load.after") do |event, app, *args|
         block.call(app)
       end
     end
 
   end
 
+end
+
+if defined?(ActionView)
+  ActionView::Base.class_eval do
+    include Eribium::ViewHelpers
+  end
 end

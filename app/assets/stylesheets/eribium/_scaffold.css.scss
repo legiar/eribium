@@ -1,0 +1,115 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  background: image_url('eribium/linen-lighter.png');
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  cursor: pointer;
+  color: #78808a;
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+.box {
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background: #F1F1F1;
+  margin-bottom: 20px;
+
+  color: #000;
+  text-shadow: none;
+
+  .black-box {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  &.form {
+    background: image_url('eribium/linen-lighter.png');
+  }
+
+  .well {
+    -webkit-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 10px;
+  }
+}
+
+.inner-well {
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1);
+  border: 1px solid #2B2B2F;
+  background: #3A3A41;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 8px;
+
+  + .inner-well {
+    margin-top: 10px;
+  }
+}
+
+.padded {
+  padding: 20px;
+}
+
+.hpadded {
+  padding: 0 20px;
+}
+
+.vpadded {
+  padding: 20px 0;
+}
+
+.black-box {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6), inset 1px 0px 0px rgba(255, 255, 255, 0.1), inset -1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6), inset 1px 0px 0px rgba(255, 255, 255, 0.1), inset -1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6), inset 1px 0px 0px rgba(255, 255, 255, 0.1), inset -1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #1D1E21;
+  background: #3B3B42;
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+
+  &.tex {
+    background: image_url('eribium/linen-light.png');
+  }
+
+  .separator a {
+    color: #fff;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+

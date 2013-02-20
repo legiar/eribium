@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+
+
+  body {
+    padding: 0; }
+
+
+  .notifications {
+    right: 20px;
+    left: 20px;
+    width: auto; } }
+@media (max-width: 480px) {
+
+
+  nav#primary > ul > li {
+    width: 33.3%;
+    margin-left: -3px; }
+
+
+  .modal.black-box .modal-header .close {
+    margin-top: -5px; } }

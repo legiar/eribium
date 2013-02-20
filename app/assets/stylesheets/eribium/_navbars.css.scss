@@ -1,0 +1,122 @@
+.navbar {
+  margin-bottom: 0px;
+
+  .navbar-inner {
+    border: 0px none;
+    @include border-radius(0);
+    @include box-shadow(0);
+
+    background: image_url('eribium/linen-gray.png');
+    border-bottom: 1px solid black;
+  }
+
+  .brand {
+    font-weight: bold;
+    color: black;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .125);
+    @include transition(all .2s linear);
+    border-right: 1px solid #1D1E21;
+
+    &:hover, &:focus {
+      text-decoration: none;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, .4), 0 0 30px rgba(255, 255, 255, .7);
+    }
+  }
+
+  .nav {
+    > li {
+      border-left: 1px solid #4A4A54;
+      border-right: 1px solid #1D1E21;
+
+      > a {
+        padding: 7px 15px 5px;
+        font-size: 11px;
+        text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+        //opacity: .9;
+
+        i {
+          vertical-align: middle;
+          font-size: 28px;
+          color: #0D0D0D;
+          text-shadow: 0px 1px 0px #656565;
+        }
+
+        &:hover, &:focus {
+          background: rgba(0, 0, 0, 0.1);
+          text-shadow: 1px 1px 7px #fff;
+          i {
+            text-shadow: 0 1px 0 rgba(255, 255, 255, .4), 0 0 30px rgba(255, 255, 255, .7);
+          }
+        }
+
+      }
+
+      &.active {
+        > a, a:hover, a:focus {
+          text-shadow: 1px 1px 7px #1cc5fc;
+          i {
+            color: #00B6F3;
+            text-shadow: 0px 0px 40px #1CC5FC;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-vertical {
+  height: 100%;
+  float: left;
+
+  .container {
+    width: 80px;
+    margin: 0px;
+  }
+
+  .navbar-inner {
+    width: 79px;
+    height: 100%;
+    padding: 0;
+    border: 0px;
+    border-right: 1px solid black;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  .nav {
+    float: none;
+    margin: 0px;
+
+    > li {
+      float: none;
+      min-height: 80px;
+      border: 0px;
+      border-top: 1px solid #4A4A54;
+      border-bottom: 1px solid #1D1E21;
+
+      > a {
+        display: block;
+        padding: 7px 0;
+        text-align: center;
+        line-height: 32px;
+
+        i {
+          vertical-align: baseline;
+          display: block;
+          font-size: 32px;
+          padding-top: 14px;
+          width: 100%;
+          height: 20px;
+          line-height: 20px;
+        }
+      }
+
+      &.active {
+        > a, a:focus, a:hover {
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+
+
+input[type="checkbox"].checky {
+  display: none; }
+
+
+  input[type="checkbox"].checky:checked + label.checky span {
+    margin-left: -6px; }
+
+
+label.checky {
+  vertical-align: middle;
+  cursor: pointer;
+  width: 40px;
+  height: 16px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.1), 1px 0px 0px #111111, -1px 0px 0px #111111, 0px -1px 0px #111111, 0px 1px 0px #111111;
+  -moz-box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.1), 1px 0px 0px #111111, -1px 0px 0px #111111, 0px -1px 0px #111111, 0px 1px 0px #111111;
+  box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.1), 1px 0px 0px #111111, -1px 0px 0px #111111, 0px -1px 0px #111111, 0px 1px 0px #111111;
+  display: inline-block;
+  margin-bottom: 0;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px; }
+
+
+  label.checky span {
+    -webkit-transition: margin-left 0.3s;
+    -moz-transition: margin-left 0.3s;
+    -o-transition: margin-left 0.3s;
+    transition: margin-left 0.3s;
+    background: url('../images/checkbox.png') no-repeat;
+    display: block;
+    height: 100%;
+    margin-left: -30px; }
+
+
+  label.checky.green span {
+    background: url('../images/checkbox_green.png') no-repeat; }
+
+
+.checky-label-left {
+  margin-right: 10px; }
+
+
+.checky-label-right {
+  margin-left: 10px; }

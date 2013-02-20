@@ -1,0 +1,30 @@
+.modal.black-box {
+  background: image_url('eribium/linen-light.png');
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+
+  .modal-header {
+    padding: 0 12px;
+    width: 100%;
+
+    .close {
+      margin-top: 5px;
+      color: white;
+      opacity: 1;
+      text-shadow: 0 1px black;
+    }
+  }
+
+  .modal-body {
+    width: 100%;
+  }
+
+  .modal-footer {
+    border-top: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    background-color: transparent;
+  }
+}
