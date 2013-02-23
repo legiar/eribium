@@ -1,3 +1,5 @@
+#require 'simple_navigation/rendering'
+
 module Eribium
 
   class NavigationRenderer < SimpleNavigation::Renderer::Base

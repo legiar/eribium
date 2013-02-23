@@ -12,7 +12,7 @@ require 'cancan'
 require 'slim'
 require 'arbre'
 
-require 'simple_navigation'
+require 'simple-navigation'
 
 require 'simple_form'
 require 'nested_form'

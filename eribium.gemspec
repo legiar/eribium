@@ -31,14 +31,14 @@ Gem::Specification.new do |s|
   
   s.add_dependency 'slim-rails',            '>= 1.0.3'
   
-  s.add_dependency 'simple_navigation'
+  s.add_dependency 'simple-navigation',     '>= 3.7.0'
 
   s.add_dependency 'simple_form',           '>= 2.0.0'
   s.add_dependency 'nested_form',           '>= 0.3.1'
   
   s.add_dependency 'sass-rails',            '>= 3.2.3'
   s.add_dependency 'modernizr',             '>= 2.6.0'
-  s.add_dependency 'bootstrap-sass',        '>= 2.1.0.0'
+  s.add_dependency 'bootstrap-sass',        '~> 2.3.0'
   s.add_dependency 'jquery-rails',          '~> 2.2.1'
   s.add_dependency 'jquery-rails-cdn'
   s.add_dependency 'select2-rails',         '~> 3.2'
