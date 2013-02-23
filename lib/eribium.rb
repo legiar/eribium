@@ -12,6 +12,8 @@ require 'cancan'
 require 'slim'
 require 'arbre'
 
+require 'simple_navigation'
+
 require 'simple_form'
 require 'nested_form'
 
@@ -49,6 +51,7 @@ module Eribium
   #autoload :Helpers,                  'eribium/helpers'
   #autoload :Views,                    'eribium/views'
 
+  autoload :NavigationRenderer
   autoload :ViewHelpers
 
   class << self
@@ -83,8 +86,12 @@ module Eribium
 
 end
 
+# ActionView helpers
 if defined?(ActionView)
   ActionView::Base.class_eval do
     include Eribium::ViewHelpers
   end
 end
+
+# SimpleNavigaton renderer
+SimpleNavigation.default_renderer = Eribium::NavigationRenderer

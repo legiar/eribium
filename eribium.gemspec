@@ -30,6 +30,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'cancan',                '>= 1.6.8'
   
   s.add_dependency 'slim-rails',            '>= 1.0.3'
+  
+  s.add_dependency 'simple_navigation'
+
   s.add_dependency 'simple_form',           '>= 2.0.0'
   s.add_dependency 'nested_form',           '>= 0.3.1'
   
