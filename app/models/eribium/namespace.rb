@@ -9,7 +9,7 @@ module Eribium
     has_many    :all_workspaces,
       class_name: "::Eribium::Workspace"
 
-    attr_accessible :name, :caption
+    attr_accessible :name, :caption, :root
 
     validates :name, presence: true, format: /\A[a-z][a-z0-9_]*\z/
     validates :caption, presence: true

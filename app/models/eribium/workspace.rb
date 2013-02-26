@@ -16,9 +16,11 @@ module Eribium
 
     attr_accessible :namespace_id, :parent_id, :name, :caption, :icon, :position, :type
 
+    validates :namespace_id, presence: true
     validates :name, presence: true, format: /\A[a-z][a-z0-9_]*\z/
     validates :caption, presence: true
 
+    before_validation :set_namespace_from_parent
     before_validation :set_caption_if_empty, on: :create
 
     def route_key
@@ -42,6 +44,10 @@ module Eribium
     #end
 
     private
+
+      def set_namespace_from_parent
+        self.namespace_id = self.parent.try(:namespace_id) unless self.namespace_id
+      end
 
       def set_caption_if_empty
         self.caption = self.name.camelize if self.caption.blank?

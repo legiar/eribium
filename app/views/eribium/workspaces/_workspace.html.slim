@@ -1,15 +1,26 @@
-tr
-  td.span1 colspan=2 = workspace.position
-  td = workspace.namespace.name
-  td = workspace.name
-  td = workspace.caption
-  td = workspace.icon
-  td = resource_actions(workspace)
-  - workspace.workspaces.each do |child|
+- unless workspace.parent
+  - if (@prev_workspace and @prev_workspace.namespace != workspace.namespace) or !@prev_workspace
     tr
-      td
-      td = child.position
-      td = child.name
-      td = child.caption
-      td = child.icon
-      td = resource_actions(workspace)
+      th colspan=5 = workspace.namespace.name
+  tr
+    td.span1 colspan=2 = workspace.position
+    td
+      - if workspace.icon
+        i class=workspace.icon
+        '&nbsp;
+      = workspace.caption
+    td = workspace.name
+    td = resource_actions(workspace)
+    - workspace.workspaces.each do |child|
+      tr
+        td
+        td = child.position
+        td 
+          = child.caption
+          - if child.icon
+            i class=child.icon
+            '&nbsp;
+        td = child.name
+        td = resource_actions(workspace)
+
+  - @prev_workspace = workspace
