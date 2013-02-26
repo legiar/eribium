@@ -1,0 +1,5 @@
+tr
+  td = user.email
+  td = user.confirmed_at.present? ? t("yes") : t("no")
+  td = user.role_names.join(",")
+  td.span1 = resource_actions(user)

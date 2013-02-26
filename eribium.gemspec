@@ -26,8 +26,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'state_machine',         '>= 1.1.2'
 
   s.add_dependency 'devise',                '>= 2.1.0'
-  s.add_dependency 'rolify',                '>= 3.2.0'
-  s.add_dependency 'cancan',                '>= 1.6.8'
   s.add_dependency 'declarative_authorization'
   
   s.add_dependency 'slim-rails',            '>= 1.0.3'

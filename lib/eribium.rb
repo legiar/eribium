@@ -6,8 +6,7 @@ require 'state_machine'
 #require 'paperclip'
 
 require 'devise'
-require 'rolify'
-require 'cancan'
+require 'declarative_authorization'
 
 require 'slim'
 require 'arbre'

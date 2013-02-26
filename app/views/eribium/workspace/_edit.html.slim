@@ -1,0 +1,4 @@
+.box
+  .tab-header 
+    = resource.new_record? ? new_resource_title : edit_resource_title(resource)
+  = render "form"

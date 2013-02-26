@@ -1,14 +1,16 @@
 module Eribium
   class Engine < Rails::Engine
-    isolate_namespace Eribium
+    #isolate_namespace Eribium
     engine_name 'eribium'
-    
+
     config.autoload_paths += %W(#{config.root}/lib)
 
     initializer "eribium.environment", :before => :load_config_initializers do |app|
       app.config.eribium = Eribium::Environment.new
       Eribium::Config = app.config.eribium
-    end    
+
+      Authorization.default_role = :user
+    end
 
     initializer "eribium.params.filter" do |app|
       app.config.filter_parameters += [:password, :password_confirmation]

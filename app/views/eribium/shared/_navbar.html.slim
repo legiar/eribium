@@ -1,0 +1,13 @@
+.navbar.navbar-vertical
+  .navbar-inner
+    .container
+      a class="brand" href="#" = Eribium.config.site_title
+      /.user
+      /  .avatar = image_tag gravatar_url(current_admin)
+      /= render_navigation expand_all: true, level: :all
+      = namespace_menu
+      /ul.nav.profile.pull-right
+        li.user: .avatar = link_to image_tag(gravatar_url(current_admin)), "#"
+        li.logout = link_to destroy_admin_session_url, method: :delete do
+          i.icon-off
+          = t("logout")

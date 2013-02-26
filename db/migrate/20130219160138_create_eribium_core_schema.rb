@@ -1,7 +1,26 @@
 class CreateEribiumCoreSchema < ActiveRecord::Migration
 
   def up
-    #return if table_exists?(:eribium_users)
+    create_table :eribium_namespaces do |t|
+      t.string      :name,            null: false
+      t.string      :caption
+      t.boolean     :root,            null: false, default: false
+      t.boolean     :internal,        null: false, default: false
+      t.text        :meta,            null: false, default: "--- {}\n"
+      t.timestamps
+    end
+
+    create_table :eribium_workspaces do |t|
+      t.references  :namespace,         null: false
+      t.integer     :parent_id
+      t.string      :name,              null: false
+      t.string      :caption
+      t.string      :icon
+      t.integer     :position
+      t.string      :type
+      t.text        :meta,              null: false, default: "--- {}\n"
+      t.timestamps
+    end
 
     create_table :eribium_users do |t|
       t.references  :profile
@@ -50,11 +69,10 @@ class CreateEribiumCoreSchema < ActiveRecord::Migration
 
     create_table :eribium_roles do |t|
       t.string      :name
-      t.references  :resource, polymorphic: true
+      t.string      :caption
       t.timestamps
     end
-    add_index :eribium_roles, :name
-    add_index :eribium_roles, [:name, :resource_type, :resource_id]
+    add_index :eribium_roles, :symbol
 
     create_table :eribium_users_roles, id: false do |t|
       t.references  :user
@@ -68,6 +86,8 @@ class CreateEribiumCoreSchema < ActiveRecord::Migration
     drop_table :eribium_user_profiles
     drop_table :eribium_users_roles
     drop_table :eribium_users
+    drop_table :eribium_workspaces
+    drop_table :eribium_namespaces
   end
 
 end

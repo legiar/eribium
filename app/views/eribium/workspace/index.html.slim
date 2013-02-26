@@ -1,0 +1,16 @@
+.box
+  .tab-header
+    = resources_title
+    .btn-group
+      = link_to t("helpers.actions.add"), new_resource_path, class: "button mini blue"
+    - begin
+      = render "block_header"
+    - rescue ActionView::MissingTemplate
+  table.table.table-bordered.table-condensed.table-striped.table-hover id=resource_class.to_s.pluralize.downcase
+    thead
+      = render "head"
+    tbody
+      = render collection
+  .footer
+    - if collection.respond_to?(:current_page)
+      = paginate collection

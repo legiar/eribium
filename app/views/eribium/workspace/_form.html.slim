@@ -1,0 +1,9 @@
+= simple_nested_form_for resource do |f|
+  = f.error_notification
+  .padded
+    = render "fields", f: f
+  .form-actions
+    .btn-group
+      = f.button :submit, class: "button mini blue"
+      = link_to t("cancel", scope: "helpers.submit"), resource.new_record? ? collection_path : resource_path(resource), class: "button"
+

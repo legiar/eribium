@@ -1,0 +1,13 @@
+.box
+  .tab-header 
+    = resource.new_record? ? new_resource_title : edit_resource_title(resource)
+  = simple_nested_form_for [:admin, resource] do |f|
+    = f.error_notification
+    .padded
+      = f.input :name
+      = f.input :caption
+    .form-actions
+      .btn-group
+        = f.button :submit
+        = link_to t("cancel", scope: "helpers.submit"), resource.new_record? ? collection_path : resource_path(resource), class: "button"
+

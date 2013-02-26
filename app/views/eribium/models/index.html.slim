@@ -1,0 +1,20 @@
+.box
+  .tab-header
+    = resources_title
+    .btn-group
+      = link_to "Import", new_resource_path(import: true), :class => "button mini blue"
+      = link_to t("helpers.actions.add"), new_resource_path, :class => "button mini blue"
+  table.table.table-condensed.table-striped.table-hover.table-highlight
+    thead
+      tr
+        th Name
+        th Caption
+        th.span1
+    tbody
+      - @models.each do |model|
+        tr
+          td= model.name
+          td= model.caption
+  .footer
+    - if collection.respond_to?(:current_page)
+      = paginate collection

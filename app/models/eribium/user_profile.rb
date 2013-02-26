@@ -1,6 +1,10 @@
 module Eribium
   class UserProfile < ActiveRecord::Base
-    #has_one   :user
+    self.table_name = :eribium_user_profiles
+  
+    has_one     :user,
+      class_name: "::Eribium::User",
+      foreign_key: :profile_id
     
     attr_accessible :name, :first_name, :last_name, :image,
                     :gender, :born_day, :born_month, :born_year, :age, :birthday,

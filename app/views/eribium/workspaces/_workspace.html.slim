@@ -1,0 +1,15 @@
+tr
+  td.span1 colspan=2 = workspace.position
+  td = workspace.namespace.name
+  td = workspace.name
+  td = workspace.caption
+  td = workspace.icon
+  td = resource_actions(workspace)
+  - workspace.workspaces.each do |child|
+    tr
+      td
+      td = child.position
+      td = child.name
+      td = child.caption
+      td = child.icon
+      td = resource_actions(workspace)
